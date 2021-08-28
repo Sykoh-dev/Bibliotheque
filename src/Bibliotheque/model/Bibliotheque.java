@@ -1,4 +1,4 @@
-package Bibliotheque;
+package Bibliotheque.model;
 
 public class Bibliotheque {
 

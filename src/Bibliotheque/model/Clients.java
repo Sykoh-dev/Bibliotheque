@@ -1,6 +1,8 @@
-package Bibliotheque;
+package Bibliotheque.model;
 
 public class Clients {
+
+    private String id;
     private String nom;
     private String prenom;
     private String numero;
@@ -10,7 +12,11 @@ public class Clients {
     private String mail;
     private String statut;
 
-    public Clients(String nom, String prenom, String numero, String rue, String ville, String codePostal, String mail, String statut) {
+    public Clients() {
+    }
+
+    public Clients(String id, String nom, String prenom, String numero, String rue, String ville, String codePostal, String mail, String statut) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.numero = numero;
@@ -19,6 +25,15 @@ public class Clients {
         this.codePostal = codePostal;
         this.mail = mail;
         this.statut = statut;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNom() {
@@ -84,12 +99,4 @@ public class Clients {
     public void setStatut(String statut) {
         this.statut = statut;
     }
-
-   public void menuClients(){
-    System.out.println("1. Ajout d'un client");
-    System.out.println("2. Supprimer un client");
-    System.out.println("3. Modifier un client");
-    System.out.println("4. Rechercher un client");
-    System.out.println("5. quitter");
-}
 }

@@ -1,15 +1,22 @@
-package Bibliotheque;
+package Bibliotheque.model;
 
 public class Livres {
 
     // Variables
+    private String ISBN;
     private String nom;
     private String auteur;
     private String edition;
     private int nbrExemplaire;
 
     // Constructeur
-    public Livres(String nom, String auteur, String edition, int nbrExemplaire) {
+
+
+    public Livres() {
+    }
+
+    public Livres(String ISBN, String nom, String auteur, String edition, int nbrExemplaire) {
+        this.ISBN = ISBN;
         this.nom = nom;
         this.auteur = auteur;
         this.edition = edition;
@@ -17,6 +24,16 @@ public class Livres {
     }
 
     // Getter/Setter
+
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
     public String getNom() {
         return nom;
     }
@@ -48,14 +65,4 @@ public class Livres {
     public void setNbrExemplaire(int nbrExemplaire) {
         this.nbrExemplaire = nbrExemplaire;
     }
-
-    public void menuLivre(){
-        System.out.println("1. Consulter la liste des livres");
-        System.out.println("2. Modification d'un livre");
-        System.out.println("3. Ajout ou suppression d'un exemplaire");
-        System.out.println("4. Supprimer un livre");
-        System.out.println("5. quitter");
-
-    }
-
 }
